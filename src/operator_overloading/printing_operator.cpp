@@ -36,13 +36,16 @@ public:
         *this = other;
     }
 
+    friend ostream &operator<<(ostream &out, const Test &test){
+        out << test.id << ": " << test.name;
+    }
+
 };
 
 int main(){
     Test test1(10, "Mike");
-    cout << "Print test 1: " << flush;
-    test1.print();
-    cout << test1 << endl;
+    Test test2(20, "Bob");
+    cout << test1 << test2 << endl;
 
     return 0;
 }
