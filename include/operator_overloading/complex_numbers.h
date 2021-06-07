@@ -4,8 +4,11 @@
 using namespace std;
 
 namespace caveofprogramming {
+class ComplexParent{
 
-class  Complex{
+};
+
+class  Complex:public ComplexParent{
 
 private:
     double real;
